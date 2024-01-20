@@ -1,0 +1,156 @@
+.Films{
+    background: url("../../../images/top-rated-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-block: 100px;
+}
+
+/*Cards*/
+
+.movies-list {
+    display: flex;
+    gap: 150px;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.movie-card {
+    margin-top: 1px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-card .card-banner {
+    position: relative;
+    background: hsl(229, 15%, 21%);
+    aspect-ratio: 2 / 3;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: 0.15s ease;
+}
+
+.movie-card .card-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: 0.15s ease;
+}
+
+.movie-card .card-banner:hover { box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.5); }
+
+.movie-card .card-banner:hover::after { background: hsla(0, 0%, 100%, 0.05); }
+
+.movie-card .card-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.movie-card .card-title {
+    color: hsl(0, 100%, 100%);
+    font-size: 16px;
+    text-decoration: none!important;
+    transition: 0.15s ease;
+}
+
+.fixthis{
+    text-decoration: none!important;
+}
+
+.movie-card .card-title:is(:hover, :focus) { color: hsl(57, 97%, 45%); }
+
+.movie-card .title-wrapper time {
+    color: hsl(57, 97%, 45%);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.movie-card .card-meta {
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.movie-card .badge { color: hsl(57, 97%, 45%); }
+
+.movie-card .duration { margin-left: auto; }
+
+.movie-card :is(.duration, .rating) {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: hsl(0, 7%, 88%);
+    font-size: 12px;;
+    font-weight: 500;
+}
+
+.movie-card :is(.duration, .rating) ion-icon {
+    font-size: 13px;
+    --ionicon-stroke-width: 50px;
+    color: hsl(57, 97%, 45%);
+}
+/*Button*/
+.filter-list {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    color: hsl(0, 100%, 100%);
+    background: hsl(228, 13%, 15%);
+    font-size: 12px;
+    font-weight: 500;
+    border: 2px solid hsl(229, 15%, 21%);
+    padding: 12px 26px;
+    border-radius: 50px;
+}
+
+.filter-btn:focus { border-color: hsl(57, 97%, 45%); }
+
+/*Text*/
+.section-subtitle {
+    margin-top: 30px;
+    color: hsl(57, 97%, 45%);
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-title { text-align: center; }
+
+/* MOVIE CARD */
+
+.movies-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 30px;
+}
+
+.stabel{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
